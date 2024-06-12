@@ -1,0 +1,186 @@
+Microsoft Windows [Version 10.0.22621.1702]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\User>ab -n 5000 -c 500 http://192.168.0.107/index.html
+Отказано в доступе.
+
+C:\Users\User>ab.exe
+Отказано в доступе.
+
+C:\Users\User>"C:\Apache24\bin"
+""C:\Apache24\bin"" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\User>cd "C:\Apache24\bin"
+
+C:\Apache24\bin>ab -n 50000 -c 500 http://192.168.0.107/index.html
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.0.107 (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Completed 40000 requests
+Completed 45000 requests
+Completed 50000 requests
+Finished 50000 requests
+
+
+Server Software:        Apache/2.4.55
+Server Hostname:        192.168.0.107
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        20286 bytes
+
+Concurrency Level:      500
+Time taken for tests:   1565.017 seconds
+Complete requests:      50000
+Failed requests:        69
+   (Connect: 0, Receive: 0, Length: 69, Exceptions: 0)
+Non-2xx responses:      69
+Total transferred:      1027457097 bytes
+HTML transferred:       1012913790 bytes
+Requests per second:    31.95 [#/sec] (mean)
+Time per request:       15650.166 [ms] (mean)
+Time per request:       31.300 [ms] (mean, across all concurrent requests)
+Transfer rate:          641.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   31 247.3      0    2060
+Processing:    93 15595 1221.3  15917   18378
+Waiting:        3 9851 2916.3   9792   16492
+Total:         94 15626 1210.0  15920   18379
+
+Percentage of the requests served within a certain time (ms)
+  50%  15920
+  66%  15954
+  75%  16326
+  80%  16374
+  90%  16418
+  95%  16444
+  98%  16478
+  99%  16506
+ 100%  18379 (longest request)
+
+C:\Apache24\bin>ab -n 100000 -c 100000 http://192.168.0.107/index.html
+ab: Invalid Concurrency [Range 0..20000]
+Usage: ab [options] [http://]hostname[:port]/path
+Options are:
+    -n requests     Number of requests to perform
+    -c concurrency  Number of multiple requests to make at a time
+    -t timelimit    Seconds to max. to spend on benchmarking
+                    This implies -n 50000
+    -s timeout      Seconds to max. wait for each response
+                    Default is 30 seconds
+    -b windowsize   Size of TCP send/receive buffer, in bytes
+    -B address      Address to bind to when making outgoing connections
+    -p postfile     File containing data to POST. Remember also to set -T
+    -u putfile      File containing data to PUT. Remember also to set -T
+    -T content-type Content-type header to use for POST/PUT data, eg.
+                    'application/x-www-form-urlencoded'
+                    Default is 'text/plain'
+    -v verbosity    How much troubleshooting info to print
+    -w              Print out results in HTML tables
+    -i              Use HEAD instead of GET
+    -x attributes   String to insert as table attributes
+    -y attributes   String to insert as tr attributes
+    -z attributes   String to insert as td or th attributes
+    -C attribute    Add cookie, eg. 'Apache=1234'. (repeatable)
+    -H attribute    Add Arbitrary header line, eg. 'Accept-Encoding: gzip'
+                    Inserted after all normal header lines. (repeatable)
+    -A attribute    Add Basic WWW Authentication, the attributes
+                    are a colon separated username and password.
+    -P attribute    Add Basic Proxy Authentication, the attributes
+                    are a colon separated username and password.
+    -X proxy:port   Proxyserver and port number to use
+    -V              Print version number and exit
+    -k              Use HTTP KeepAlive feature
+    -d              Do not show percentiles served table.
+    -S              Do not show confidence estimators and warnings.
+    -q              Do not show progress when doing more than 150 requests
+    -l              Accept variable document length (use this for dynamic pages)
+    -g filename     Output collected data to gnuplot format file.
+    -e filename     Output CSV file with percentages served
+    -r              Don't exit on socket receive errors.
+    -m method       Method name
+    -h              Display usage information (this message)
+
+C:\Apache24\bin>ab -n 100000 -c 20000 http://192.168.0.107/index.htmll
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.0.107 (be patient)
+
+Test aborted after 10 failures
+
+apr_socket_connect(): ═хтючьюцэю т√яюыэшЄ№ юяхЁрЎш■ эр ёюъхЄх, Є.ъ. сєЇхЁ ёыш°ъюь ьры шыш юўхЁхф№ яхЁхяюыэхэр.   (730055)
+
+C:\Apache24\bin>>ab -n 100000 -c 20000 http://192.168.0.107/index.html
+"-n" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Apache24\bin>ab -n 50000 -c 5000 http://192.168.0.107/index.html
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.0.107 (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Completed 40000 requests
+Completed 45000 requests
+Completed 50000 requests
+Finished 50000 requests
+
+
+Server Software:        Apache/2.4.55
+Server Hostname:        192.168.0.107
+Server Port:            80
+
+Document Path:          /index.html
+Document Length:        20286 bytes
+
+Concurrency Level:      5000
+Time taken for tests:   1564.192 seconds
+Complete requests:      50000
+Failed requests:        0
+Total transferred:      1028850000 bytes
+HTML transferred:       1014300000 bytes
+Requests per second:    31.97 [#/sec] (mean)
+Time per request:       156419.175 [ms] (mean)
+Time per request:       31.284 [ms] (mean, across all concurrent requests)
+Transfer rate:          642.34 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   31 244.5      1    2064
+Processing:   300 149199 27427.2 156746  159277
+Waiting:        4 78921 43977.7  78416  158694
+Total:        300 149230 27427.7 156752  159277
+
+Percentage of the requests served within a certain time (ms)
+  50%  156752
+  66%  156883
+  75%  156986
+  80%  157070
+  90%  158579
+  95%  158736
+  98%  158870
+  99%  158962
+ 100%  159277 (longest request)
+
+C:\Apache24\bin>

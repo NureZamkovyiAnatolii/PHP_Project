@@ -1,0 +1,8 @@
+CREATE TABLE User(
+user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+login varchar(50),
+email varchar(100),
+password varchar(100));
+INSERT INTO user( login, email, password)
+VALUES ('Salah', 'anatoliisalah@gmail.com', '140140140');
+SELECT * FROM USER 
